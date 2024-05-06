@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Footer from "./Componentes/Footer";
+import Header2 from "./Componentes/Header2";
+import Home from "./Pages/Home";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import ServicePage from "./Pages/Services";
+import About from "./Pages/About";
+import { useEffect } from "react";
+import WhatsappIcon from "./Componentes/WhatsappIcon";
+import Contact from "./Pages/Contact";
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header2 />
+      <ScrollToTop />
+      <WhatsappIcon/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<ServicePage />} />
+        <Route path="/about-us" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
