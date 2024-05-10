@@ -1,9 +1,16 @@
 import React from "react";
+import gif1 from "../assets/gif4.gif";
 
 export default function Contact() {
   return (
-    <div>
-      <section class="relative z-10 overflow-hidden bg-white dark:bg-dark py-20 lg:py-40 px-2 lg:px-12  ">
+    <div
+      style={{
+        backgroundImage: `url(${gif1})`,
+        backgroundPosition: "center",
+        backgroundColor: "#e5e5e5",
+      }}
+    >
+      <section class="relative z-10 overflow-hidden  py-20 lg:py-40 px-2 lg:px-40  ">
         <div class="container mx-auto">
           <div class="flex flex-wrap -mx-4 lg:justify-between">
             <div class="w-full px-4 lg:w-1/2 xl:w-6/12">
@@ -115,12 +122,14 @@ export default function Contact() {
                     <input
                       type="text"
                       placeholder="Your Name"
+                      required
                       class="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none"
                     />
                   </div>
                   <div class="mb-6">
                     <input
                       type="email"
+                      required
                       placeholder="Your Email"
                       class="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none"
                     />
@@ -128,6 +137,7 @@ export default function Contact() {
                   <div class="mb-6">
                     <input
                       type="text"
+                      required
                       placeholder="Your Phone"
                       class="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none"
                     />
@@ -135,6 +145,7 @@ export default function Contact() {
                   <div class="mb-6">
                     <textarea
                       rows="6"
+                      required
                       placeholder="Your Message"
                       class="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full resize-none rounded border py-3 px-[14px] text-base outline-none"
                     ></textarea>

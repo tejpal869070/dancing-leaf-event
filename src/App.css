@@ -47,6 +47,14 @@
   font-family: "Poetsen One", sans-serif;
   font-style: normal;
 }
+.full-width {
+  width: 100vw !important;
+  transition: width 0.5s ease; /* Smooth transition */
+}
+.full-width-reverse {
+  
+  transition: width 0.5s ease; /* Smooth transition */
+}
 
 body{
   
@@ -59,4 +67,48 @@ body{
 .zoomed-in:hover {
   transform: scale(1.1); 
   transition: transform 0.5s ease; /* Adjust the duration and timing function as needed */
+}
+#HomeServiceCard:hover{
+  border-radius: 100px 30px 100px 30px !important;
+}
+#HomeServiceCard:hover #HomeServiceCardInner{
+  
+  border-radius: 100px 30px 100px 30px !important;
+  background-color: rgba(209, 207, 207, 0.219);
+}
+
+
+
+.card {
+ 
+  transition: all 0.2s;
+  position: relative;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: inherit;
+  height: inherit;
+  background: rgba(255,255,255,.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  backdrop-filter: blur(0px);
+  border-radius: 8px;
+}
+
+.card:hover {
+  transform: scale(1.04) rotate(2deg);
+}
+
+
+
+@keyframes move-up6 {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes move-down1 {
+  to {
+    transform: translateY(10px);
+  }
 }

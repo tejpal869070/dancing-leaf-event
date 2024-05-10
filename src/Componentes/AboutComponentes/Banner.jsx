@@ -1,5 +1,5 @@
 import React from "react";
-import bg1 from "../../assets/bg-4.jpg";
+import bg1 from "../../assets/bg-4-min.jpg";
 import bg2 from "../../assets/profile-bg-removebg.png";
 import maampic from "../../assets/maam2.png";
 

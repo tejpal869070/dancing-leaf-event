@@ -1,9 +1,14 @@
 import React from "react";
 import cake from "../../assets/cake.png";
+import gif1 from "../../assets/gif2.gif"
 
 export default function Cake() {
   return (
-    <div className="container m-auto mt-6">
+    <div className="container m-auto mt-6"  style={{
+        backgroundImage: `url(${gif1})`,
+        backgroundPosition: "center",
+        backgroundColor: "#fff8daf2",
+      }}>
       <div className="flex flex-wrap items-center justify-center justiy-between ">
         <div className="w-[98%] lg:w-[45%] px-6">
           <h1 className="mb-6 text-[42px]  text-[#9d1f60] norican-regular font-[800]">
@@ -28,7 +33,7 @@ export default function Cake() {
           </div>
         </div>
         <div className="w-[98%] lg:w-[45%] ">
-          <img alt="cake" src={cake} className="w-[80%] m-auto" />
+          <img alt="cake" src={cake} className="w-[80%] m-auto " />
         </div>
       </div>
     </div>

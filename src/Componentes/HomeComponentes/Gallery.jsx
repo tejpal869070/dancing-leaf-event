@@ -1,7 +1,9 @@
-import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useInView } from "react-intersection-observer";
+import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 function Gallery() {
   const settings = {
@@ -26,7 +28,7 @@ function Gallery() {
   const settings2 = {
     dots: false,
     infinite: true,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     speed: 4000,
@@ -34,14 +36,14 @@ function Gallery() {
     cssEase: "linear",
     rtl: true,
     responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-          },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
-      ],
+      },
+    ],
   };
   const data = [
     {
@@ -75,22 +77,42 @@ function Gallery() {
       image: require("../../assets/themed.webp"),
     },
   ];
+
+  const [isVisible, setIsVisible] = useState(false);
+  const { ref, inView } = useInView({ threshold: 0.5 });
+  const animationRef = useRef(null);
+
+  useEffect(() => {
+    if (inView) {
+      setIsVisible(true);
+    }
+  }, [inView]);
   return (
-    <div className="py-16 lg:pt-12">
-    <p className="text-4xl font-bold text-[#9d1f60] text-center mb-1">Portfolio</p>
-    <div className="h-[4px] rounded-full w-[60px] m-auto bg-black mb-6"></div>
+    <div className="py-16 lg:pt-12" ref={ref}>
+      <p className="text-4xl font-bold text-[#9d1f60] text-center mb-1">
+        Portfolio
+      </p>
+      <div className="h-[4px] rounded-full w-[60px] m-auto bg-black mb-6"></div>
       <div className="slider-container  w-[90%] m-auto shadow-inner ">
         <Slider {...settings}>
           {data &&
             data.map((item, index) => (
-              <div className="p-2">
+              <motion.div
+                ref={animationRef}
+                animate={{
+                  scale: isVisible ? 1 : 0,
+                  opacity: isVisible ? 1 : 0,
+                }}
+                transition={{ duration: 0.5 }}
+                className="p-2"
+              >
                 <img
                   alt="images"
                   src={item.image}
                   className="h-[200px] ml-4 w-full rounded-lg"
                   loading="lazy"
                 />
-              </div>
+              </motion.div>
             ))}
         </Slider>
       </div>
@@ -101,13 +123,21 @@ function Gallery() {
         >
           {data &&
             data.map((item, index) => (
-              <div className="p-2">
+              <motion.div
+                ref={animationRef}
+                animate={{
+                  scale: isVisible ? 1 : 0,
+                  opacity: isVisible ? 1 : 0,
+                }}
+                transition={{ duration: 0.5 }}
+                className="p-2"
+              >
                 <img
                   alt="images"
                   src={item.image}
-                  className="h-[200px] ml-4 w-full rounded-lg"
+                  className="h-[300px] ml-4 w-full rounded-lg"
                 />
-              </div>
+              </motion.div>
             ))}
         </Slider>
       </div>
