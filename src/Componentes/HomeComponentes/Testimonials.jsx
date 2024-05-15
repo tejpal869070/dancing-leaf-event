@@ -69,10 +69,10 @@ export default function Testimonials() {
     ],
   };
   return (
-    <div className="overflow-x-hidden overflow-y-hidden relative bg-gray-200 mt-4 container py-6  m-auto flex flex-col lg:flex-row lg:space-x-8">
+    <div className="overflow-x-hidden overflow-y-hidden relative rounded-lg bg-[#1a1a1a] mt-4 container   m-auto flex flex-col lg:flex-row lg:space-x-8">
       <div className="relative flex items-center justify-center  text-white p-4 rounded-lg w-full lg:w-[48%] mb-4 lg:mb-0">
         <img alt="circle" src={img1} className="animate-pulse"/>
-        <div className="text-black norican-regular absolute text-5xl font-bold word-wrap">
+        <div className="text-white norican-regular absolute text-5xl font-bold word-wrap">
           What our <br /> clients says
         </div>
       </div>
@@ -86,7 +86,7 @@ export default function Testimonials() {
                   alt={item.title}
                   className="h-20 mb-6 w-20 rounded-full m-auto"
                 />
-                <h1 className="text-xl font-semibold w-[80%] text-center m-auto "> {item.description} </h1>
+                <h1 className="text-xl font-normal w-[80%] text-white text-center m-auto "> {item.description} </h1>
                 <img src={stars} alt={item.title} className="h-16 m-auto" />
               </div>
             ))}

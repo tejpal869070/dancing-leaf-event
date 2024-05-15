@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Hero1 from "../Componentes/HomeComponentes/Hero1";
-import Section1 from "../Componentes/HomeComponentes/Section1";
 import Services from "../Componentes/HomeComponentes/Services";
 import Video from "../Componentes/HomeComponentes/Video";
 import Cake from "../Componentes/HomeComponentes/Cake";
 import Gallery from "../Componentes/HomeComponentes/Gallery";
 import { HomePageData } from "../Controller/api";
 import { HomePageDummyData } from "../Data/HomePage";
-import Counter from "../Componentes/HomeComponentes/Counter";
 import Testimonials from "../Componentes/HomeComponentes/Testimonials";
+import Instagram from "../Componentes/HomeComponentes/Instagram";
+import AboutHero1 from "../Componentes/AboutComponentes/AboutHero1";
 
 export default function Home() {
   const [data, setData] = useState();
@@ -28,13 +28,18 @@ export default function Home() {
   return (
     <div className="scroll-smooth">
       <Hero1 />
-      <Section1 data={data} />
-      <Counter />
+      {/* <Section1 data={data} /> */}
+      <AboutHero1/>
+      {/* <Counter /> */}
       <Services data={data} />
       <Cake />
-      <Testimonials/>
+      <Testimonials />
+      <Instagram />
       <Gallery />
       <Video />
+      <div class="p-5 sm:p-8">
+    
+</div>
     </div>
   );
 }

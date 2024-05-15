@@ -6,7 +6,7 @@ export const HomePageDummyData = [
     },
     {
       id: 2,
-      title: "Corporate Parties",
+      title: "Corporate Events",
       image: require("../assets/corporate.webp"),
     },
     {
@@ -16,7 +16,7 @@ export const HomePageDummyData = [
     },
     {
       id: 4,
-      title: "Charity Parties",
+      title: "Customised Parties",
       image: require("../assets/charity.jpg"),
     },
     {

@@ -19,8 +19,16 @@ export default function Gallery() {
         <div className=" container m-auto flex flex-wrap w-full justify-around py-6">
           {GalleryData &&
             GalleryData.map((item, index) => (
-              <div className="p-2 bg-gray-300 rounded-lg mb-2 ">
-                <img alt="img1" src={item.image} className={`hover:scale-125 hover:w3-animate-top	 w-60 h-60 rounded-lg  transition-transform duration-300  ease-in-out ${(index+2)%2===0 ? "hover:-rotate-2  " : "hover:rotate-2 " }`} />
+              <div className="p-2 w-1/2 bg-gray-300 rounded-lg mb-2 ">
+                <img
+                  alt="img1"
+                  src={item.image}
+                  className={`hover:scale-125 hover:w3-animate-top	 w-60 h-60 rounded-lg  transition-transform duration-300  ease-in-out ${
+                    (index + 2) % 2 === 0
+                      ? "hover:-rotate-2  "
+                      : "hover:rotate-2 "
+                  }  `}
+                />
               </div>
             ))}
         </div>

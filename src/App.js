@@ -9,6 +9,8 @@ import { useEffect } from "react";
 import WhatsappIcon from "./Componentes/WhatsappIcon";
 import Contact from "./Pages/Contact";
 import Gallery from "./Pages/Gallery";
+import Packages from "./Pages/Packages";
+import Rentals from "./Pages/Rentals";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -32,6 +34,8 @@ function App() {
         <Route path="/about-us" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery" element={<Gallery/>} />
+        <Route path="/packages" element={<Packages/>}/>
+        <Route path="/rentals" element={<Rentals/> } />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -5,7 +5,6 @@ import { MdOutlineMenuOpen } from "react-icons/md";
 import { GiCancel } from "react-icons/gi";
 import { MdLabelImportant } from "react-icons/md";
 
-
 export default function Header2() {
   const [isOpened, setOpened] = useState(false);
   const { pathname } = useLocation();
@@ -15,12 +14,10 @@ export default function Header2() {
     setOpened(!isOpened);
   };
 
-
   useEffect(() => {
-    setOpened(false)
+    setOpened(false);
   }, [pathname]);
 
-  
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -29,15 +26,22 @@ export default function Header2() {
       setIsExpanded(scrollPercentage >= 10);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []); 
+  }, []);
 
   return (
-    <header id="heaader" className={`fixed inset-x-0 top-0 z-30 mx-auto  border border-gray-100 bg-white/80  shadow backdrop-blur-lg   lg:w-[70%] ${isExpanded ? 'full-width lg:rounded-lg md:top-0 lg:px-16 ' : 'full-width-reverse lg:rounded-full md:top-6'}`} >
+    <header
+      id="heaader"
+      className={`fixed inset-x-0 top-0 z-30 mx-auto  border border-gray-100 bg-white/80  shadow backdrop-blur-lg   lg:w-[70%] ${
+        isExpanded
+          ? "full-width lg:rounded-lg md:top-0 lg:px-16 "
+          : "full-width-reverse lg:rounded-full md:top-6"
+      }`}
+    >
       <div className="px-4">
         <div className="flex items-center justify-between">
           <div className="flex shrink-0 py-2">
@@ -55,6 +59,12 @@ export default function Header2() {
               Home
             </Link>
             <Link
+              className="inline-block font-bold rounded-lg px-2 py-1 nav-links text-lg text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
+              to={"/about-us"}
+            >
+              About
+            </Link>
+            <Link
               aria-current="page"
               className="inline-block font-bold rounded-lg px-2 py-1 nav-links text-lg text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
               to={"/services"}
@@ -62,11 +72,13 @@ export default function Header2() {
               Services
             </Link>
             <Link
+              aria-current="page"
               className="inline-block font-bold rounded-lg px-2 py-1 nav-links text-lg text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
-              to={"/about-us"}
+              to={"/rentals"}
             >
-              About
+              Rentals
             </Link>
+
             <Link
               className="inline-block font-bold rounded-lg px-2 py-1 nav-links text-lg text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
               to={"/gallery"}
@@ -75,15 +87,21 @@ export default function Header2() {
             </Link>
             <Link
               className="inline-block font-bold rounded-lg px-2 py-1 nav-links text-lg text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
+              to={"/packages"}
+            >
+              Packages
+            </Link>
+            <Link
+              className="inline-block font-bold rounded-lg px-2 py-1 nav-links text-lg text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
               to={"/contact"}
             >
-              Contact
+            Enquiry
             </Link>
           </div>
 
           <div className="block md:hidden">
             {isOpened ? (
-              <GiCancel size={30} onClick={openMenu}  className="animate-spin"/>
+              <GiCancel size={30} onClick={openMenu} className="animate-spin" />
             ) : (
               <MdOutlineMenuOpen size={30} onClick={openMenu} />
             )}
@@ -94,11 +112,27 @@ export default function Header2() {
       {isOpened ? (
         <div className="w-[60vw]  pb-16 flex pt-16 justify-center w3-animate-top">
           <div className="flex flex-col gap-4">
-            <Link to={"/"} className="text-xl font-semibold flex gap-1"><MdLabelImportant className="mt-1" /> Home</Link>
-            <Link to={"/services"} className="text-xl font-semibold flex gap-1"><MdLabelImportant className="mt-1" /> Services</Link>
-            <Link to={"/about-us"} className="text-xl font-semibold flex gap-1"><MdLabelImportant className="mt-1" /> About</Link>
-            <Link to={"/gallery"} className="text-xl font-semibold flex gap-1"><MdLabelImportant className="mt-1" /> Gallery</Link>
-            <Link to={"/contact"} className="text-xl font-semibold flex gap-1"><MdLabelImportant className="mt-1" /> Contact</Link>
+            <Link to={"/"} className="text-xl font-semibold flex gap-1">
+              <MdLabelImportant className="mt-1" /> Home
+            </Link>
+            <Link to={"/about-us"} className="text-xl font-semibold flex gap-1">
+              <MdLabelImportant className="mt-1" /> About
+            </Link>
+            <Link to={"/services"} className="text-xl font-semibold flex gap-1">
+              <MdLabelImportant className="mt-1" /> Services
+            </Link>
+            <Link to={"/packages"} className="text-xl font-semibold flex gap-1">
+              <MdLabelImportant className="mt-1" /> Packages
+            </Link>
+            <Link to={"/gallery"} className="text-xl font-semibold flex gap-1">
+              <MdLabelImportant className="mt-1" /> Gallery
+            </Link>
+            <Link to={"/rentals"} className="text-xl font-semibold flex gap-1">
+              <MdLabelImportant className="mt-1" /> Rentals
+            </Link>
+            <Link to={"/contact"} className="text-xl font-semibold flex gap-1">
+              <MdLabelImportant className="mt-1" /> Contact
+            </Link>
           </div>
         </div>
       ) : (

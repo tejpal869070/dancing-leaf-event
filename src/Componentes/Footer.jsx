@@ -15,13 +15,14 @@ export default function Footer() {
         </div>
         <div className="mt-8">
           <p className=" text-lg font-semibold">Contact Information</p>
-          <p className="">123 Main Street, Cityville, ABC 12345</p>
-          <p className="">Phone: +1-123-456-7890</p>
-          <p className="">Email: info@example.com</p>
+          <p className="">Tracy, California</p>
+          <p className="">Phone: +1-669-3508979</p>
+          <p className="">Email: info@dancingleafevents.com</p>
         </div>
-        <p className=" text-lg mt-8">
-          &copy; 2024 Your Website. All rights reserved.
-        </p>
+        <div className="flex flex-wrap justify-between text-lg mt-8 w-full bg-[#ffffffde] py-2 rounded-lg px-2">
+          <p className="text-left"> &copy; 2024 Your Website. All rights reserved.</p>
+          <p>Designed & Developed by <a target="_blank" rel="noreferrer" href="https://coralitsolution.com/"> <u>Coral IT Solution</u> </a> </p>
+        </div>
       </div>
       <div className=" flex  absolute bottom-0 z-[-1] ">
         <img

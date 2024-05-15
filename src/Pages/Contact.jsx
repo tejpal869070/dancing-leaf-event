@@ -1,5 +1,6 @@
 import React from "react";
 import gif1 from "../assets/gif4.gif";
+import bg2 from "../assets/bg-valvet.jpg"
 
 export default function Contact() {
   return (
@@ -22,9 +23,7 @@ export default function Contact() {
                   GET IN TOUCH WITH US
                 </h2>
                 <p class="text-base leading-relaxed text-body-color dark:text-dark-6 mb-9">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eius tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim adiqua minim veniam quis nostrud exercitation ullamco
+                At Dancing Leaf , we craft unforgettable experiences tailored to your vision. With meticulous planning and seamless execution, we transform your events into cherished memories. Let us bring your ideas to life, leaving you free to enjoy every moment.
                 </p>
                 <div class="mb-8 flex w-full max-w-[370px]">
                   <div class="bg-primary/5 text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded sm:h-[70px] sm:max-w-[70px]">
@@ -46,7 +45,7 @@ export default function Contact() {
                       Our Location
                     </h4>
                     <p class="text-base text-body-color dark:text-dark-6">
-                      99 S.t Jomblo Park Pekanbaru 28292. Indonesia
+                      Tracy, California
                     </p>
                   </div>
                 </div>
@@ -85,7 +84,7 @@ export default function Contact() {
                       Phone Number
                     </h4>
                     <p class="text-base text-body-color dark:text-dark-6">
-                      (+62)81 414 257 9980
+                      +1 (669)3508979
                     </p>
                   </div>
                 </div>
@@ -109,21 +108,21 @@ export default function Contact() {
                       Email Address
                     </h4>
                     <p class="text-base text-body-color dark:text-dark-6">
-                      info@yourdomain.com
+                      info@dancingleafevents.com
                     </p>
                   </div>
                 </div>
               </div>
             </div>
             <div class="w-full px-4 lg:w-1/2 xl:w-5/12">
-              <div class="relative p-8 bg-white rounded-lg shadow-lg dark:bg-dark-2 sm:p-12">
+              <div class="relative p-8 bg-cover bg-no-repeat rounded-lg shadow-lg dark:bg-dark-2 sm:p-12" style={{backgroundImage:`url(${bg2})`}}>
                 <form>
                   <div class="mb-6">
                     <input
                       type="text"
                       placeholder="Your Name"
                       required
-                      class="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none"
+                      class="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full rounded-full border py-3 px-[14px] text-base outline-none"
                     />
                   </div>
                   <div class="mb-6">
@@ -131,7 +130,7 @@ export default function Contact() {
                       type="email"
                       required
                       placeholder="Your Email"
-                      class="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none"
+                      class="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full rounded-full border py-3 px-[14px] text-base outline-none"
                     />
                   </div>
                   <div class="mb-6">
@@ -139,7 +138,7 @@ export default function Contact() {
                       type="text"
                       required
                       placeholder="Your Phone"
-                      class="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none"
+                      class="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full rounded-full border py-3 px-[14px] text-base outline-none"
                     />
                   </div>
                   <div class="mb-6">
@@ -147,13 +146,13 @@ export default function Contact() {
                       rows="6"
                       required
                       placeholder="Your Message"
-                      class="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full resize-none rounded border py-3 px-[14px] text-base outline-none"
+                      class="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full resize-none rounded-lg border py-3 px-[14px] text-base outline-none"
                     ></textarea>
                   </div>
                   <div>
                     <button
                       type="submit"
-                      class="w-full p-3 text-white transition border rounded border-primary bg-[blue] hover:bg-opacity-90"
+                      class="w-full p-3 text-white transition border rounded-full border-primary bg-[blue] hover:bg-opacity-90"
                     >
                       Send Message
                     </button>

@@ -1,24 +1,47 @@
 import React from "react";
 import Banner from "../Componentes/ServiceComponentes/Banner";
 import Service1 from "../Componentes/ServiceComponentes/Service1";
-import bg1 from "../assets/bg-valvet.jpg";
+// import bg10 from "../assets/bg-10.jpg";
+import bg10 from "../assets/bg-valvet.jpg";
+import corner from "../assets/corner-flower.png";
+import img1 from "../assets/customparty.webp";
+import { Link } from "react-router-dom";
 
 export default function ServicePage() {
   return (
-    <div >
+    <div>
       <Banner />
       <Service1 />
-      <div
-        style={{ backgroundImage: `url(${bg1})`, backgroundSize: "cover" }}
-        className="container flex flex-wrap  items-center justify-center justify-around py-6 m-auto bg-black text-white w-[95%] lg:w-[50%] rounded-lg  lg:rounded-full"
-      >
-        <div>
-          <p>Need items for your parties ?</p>
-          <p className="text-lg">We have a wide range of rental items.</p>
+      <div className="container m-auto w-[95vw] lg:w-[70vw]">
+        <div
+          className=" bg-fixed relative py-12 px-6 flex flex-col items-center justify-center rounded-lg bg-gray-200 bg-cover bg-no-repeat"
+          style={{ backgroundImage: `url(${bg10})` }}
+        >
+          <div className="w-full m-auto">
+            <img alt="img2" src={img1} className="lg:w-[50%] m-auto mb-4" />
+          </div>
+          <h1 className="text-white poetsen-one-regular  text-3xl  text-center leading-10">
+            If you're looking to organize a customized event or party, <br />{" "}
+            just share your thoughts with us, <br /> and we'll make it a
+            reality.
+          </h1>
+          <Link  to={"/contact"} class="relative inline-block text-lg group mt-10">
+            <span class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-4 border-gray-900 rounded-lg group-hover:text-white">
+              <span class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
+              <span class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
+              <span class="relative font-bold">Get In Touch</span>
+            </span>
+            <span
+              class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
+              data-rounded="rounded-lg"
+            ></span>
+          </Link>
+          <img
+            alt="cirner"
+            className="absolute bottom-0 left-0 w-[200px]"
+            src={corner}
+          />
         </div>
-        <button class="mt-4 cursor-pointer text-white font-bold relative text-[14px] w-[9em] h-[3em] text-center bg-gradient-to-r from-violet-500 from-10% via-sky-500 via-30% to-pink-500 to-90% bg-[length:400%] rounded-[20px] z-10 hover:animate-gradient-xy hover:bg-[length:100%] before:content-[''] before:absolute before:-top-[5px] before:-bottom-[5px] before:-left-[5px] before:-right-[5px] before:bg-gradient-to-r before:from-violet-500 before:from-10% before:via-sky-500 before:via-30% before:to-pink-500 before:bg-[length:400%] before:-z-10 before:rounded-[35px] before:hover:blur-xl before:transition-all before:ease-in-out before:duration-[1s] before:hover:bg-[length:10%] active:bg-violet-700 focus:ring-violet-700 hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]">
-          View
-        </button>
       </div>
     </div>
   );

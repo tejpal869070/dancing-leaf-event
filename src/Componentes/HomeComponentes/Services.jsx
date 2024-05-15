@@ -1,30 +1,54 @@
-import React from "react";
 import "./service.css";
 import bar from "../../assets/bar.png";
+import { useInView } from "react-intersection-observer";
+import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+import VisibilitySensor from 'react-visibility-sensor';
 
 export default function Services({ data }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const { ref, inView } = useInView({ threshold: 0.5 });
+  const animationRef = useRef(null);
+
+  useEffect(() => {
+    if (inView) {
+      setIsVisible(true);
+    }
+  }, [inView]);
   return (
-    <div className="py-6 mt-6">
+    <div className="py-6 mt-6 ">
       <h1 className="text-4xl font-bold text-[#9d1f60] text-center mb-8">
         Our Services
       </h1>
-      <div className="container m-auto">
-        <div className="flex flex-wrap  flex-row mt-6  justify-around items-center">
+      <div className="container m-auto ">
+        <div
+          className="flex flex-wrap  flex-row mt-6  justify-around items-center"
+          ref={ref}
+        >
           {data &&
             data.map((item, index) => (
-              <div
+              <motion.div
+                ref={animationRef}
+                initial={{
+                  x: index % 2 === 0 ? -100 : 100, // Start position outside viewport (left or right)
+                  opacity: 0,
+                }}
+                animate={{
+                  x: isVisible ? 1 : 1, // Final position at 0 (left)
+                  opacity: isVisible ? 1 : 1,
+                }}
+                transition={{ duration: 1.2 }}
                 key={index}
                 id="HomeServiceCard"
-                className="  relative mb-6 zoomed-in card  w-[90%] lg:w-[28%] h-[300px] bg-cover rounded-lg"
+                className="relative mb-6 zoomed-in card  w-[90%] lg:w-[28%] h-[300px] bg-cover rounded-lg"
                 style={{
                   backgroundImage: `url(${item.image})`,
                   backgroundPosition: "center",
                 }}
               >
                 <div
-                id="HomeServiceCardInner"
+                  id="HomeServiceCardInner"
                   className="  absolute w-full h-full poetsen-one-regular text-center bg-[#00000036] flex flex-col justify-center items-center text-[25px] font-bold text-[#9d1f60] py-4 rounded-b-lg m-auto w-full"
-                  // style={{ boxShadow: `0 11px -4px rgba(255, 255, 255, 0.5)` }}
                 >
                   <p
                     className="text-[white]"
@@ -38,12 +62,10 @@ export default function Services({ data }) {
                     style={{ filter: "drop-shadow(2px 4px 6px black)" }}
                   />
                 </div>
-              </div>
+              </motion.div>
             ))}
         </div>
       </div>
-
-      
     </div>
   );
 }
