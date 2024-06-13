@@ -11,22 +11,22 @@ export default function Contact() {
         backgroundColor: "#e5e5e5",
       }}
     >
-      <section class="relative z-10 overflow-hidden  py-20 lg:py-40 px-2 lg:px-40  ">
-        <div class="container mx-auto">
-          <div class="flex flex-wrap -mx-4 lg:justify-between">
-            <div class="w-full px-4 lg:w-1/2 xl:w-6/12">
-              <div class="mb-12 max-w-[570px] lg:mb-0">
-                <span class="block mb-4 text-base font-semibold text-primary">
+      <section className="relative z-10 overflow-hidden  py-20 lg:py-40 px-2 lg:px-40  ">
+        <div className="container mx-auto">
+          <div className="flex flex-wrap -mx-4 lg:justify-between">
+            <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
+              <div className="mb-12 max-w-[570px] lg:mb-0">
+                <span className="block mb-4 text-base font-semibold text-primary">
                   Contact Us
                 </span>
-                <h2 class="text-dark dark:text-white mb-6 text-[32px] font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px]">
+                <h2 className="text-dark dark:text-white mb-6 text-[32px] font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px]">
                   GET IN TOUCH WITH US
                 </h2>
-                <p class="text-base leading-relaxed text-body-color dark:text-dark-6 mb-9">
+                <p className="text-base leading-relaxed text-body-color dark:text-dark-6 mb-9">
                 At Dancing Leaf , we craft unforgettable experiences tailored to your vision. With meticulous planning and seamless execution, we transform your events into cherished memories. Let us bring your ideas to life, leaving you free to enjoy every moment.
                 </p>
-                <div class="mb-8 flex w-full max-w-[370px]">
-                  <div class="bg-primary/5 text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded sm:h-[70px] sm:max-w-[70px]">
+                <div className="mb-8 flex w-full max-w-[370px]">
+                  <div className="bg-primary/5 text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded sm:h-[70px] sm:max-w-[70px]">
                     <svg
                       width="32"
                       height="32"
@@ -40,17 +40,17 @@ export default function Contact() {
                       />
                     </svg>
                   </div>
-                  <div class="w-full">
-                    <h4 class="mb-1 text-xl font-bold text-dark dark:text-white">
+                  <div className="w-full">
+                    <h4 className="mb-1 text-xl font-bold text-dark dark:text-white">
                       Our Location
                     </h4>
-                    <p class="text-base text-body-color dark:text-dark-6">
+                    <p className="text-base text-body-color dark:text-dark-6">
                       Tracy, California
                     </p>
                   </div>
                 </div>
-                <div class="mb-8 flex w-full max-w-[370px]">
-                  <div class="bg-primary/5 text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded sm:h-[70px] sm:max-w-[70px]">
+                <div className="mb-8 flex w-full max-w-[370px]">
+                  <div className="bg-primary/5 text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded sm:h-[70px] sm:max-w-[70px]">
                     <svg
                       width="32"
                       height="32"
@@ -79,17 +79,17 @@ export default function Contact() {
                       </defs>
                     </svg>
                   </div>
-                  <div class="w-full">
-                    <h4 class="mb-1 text-xl font-bold text-dark dark:text-white">
+                  <div className="w-full">
+                    <h4 className="mb-1 text-xl font-bold text-dark dark:text-white">
                       Phone Number
                     </h4>
-                    <p class="text-base text-body-color dark:text-dark-6">
+                    <p className="text-base text-body-color dark:text-dark-6">
                       +1 (669)3508979
                     </p>
                   </div>
                 </div>
-                <div class="mb-8 flex w-full max-w-[370px]">
-                  <div class="bg-primary/5 text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded sm:h-[70px] sm:max-w-[70px]">
+                <div className="mb-8 flex w-full max-w-[370px]">
+                  <div className="bg-primary/5 text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded sm:h-[70px] sm:max-w-[70px]">
                     <svg
                       width="32"
                       height="32"
@@ -103,63 +103,63 @@ export default function Contact() {
                       />
                     </svg>
                   </div>
-                  <div class="w-full">
-                    <h4 class="mb-1 text-xl font-bold text-dark dark:text-white">
+                  <div className="w-full">
+                    <h4 className="mb-1 text-xl font-bold text-dark dark:text-white">
                       Email Address
                     </h4>
-                    <p class="text-base text-body-color dark:text-dark-6">
+                    <p className="text-base text-body-color dark:text-dark-6">
                       info@dancingleafevents.com
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w-full px-4 lg:w-1/2 xl:w-5/12">
-              <div class="relative p-8 bg-cover bg-no-repeat rounded-lg shadow-lg dark:bg-dark-2 sm:p-12" style={{backgroundImage:`url(${bg2})`}}>
+            <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
+              <div className="relative p-8 bg-cover bg-no-repeat rounded-lg shadow-lg dark:bg-dark-2 sm:p-12" style={{backgroundImage:`url(${bg2})`}}>
                 <form>
-                  <div class="mb-6">
+                  <div className="mb-6">
                     <input
                       type="text"
                       placeholder="Your Name"
                       required
-                      class="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full rounded-full border py-3 px-[14px] text-base outline-none"
+                      className="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full rounded-full border py-3 px-[14px] text-base outline-none"
                     />
                   </div>
-                  <div class="mb-6">
+                  <div className="mb-6">
                     <input
                       type="email"
                       required
                       placeholder="Your Email"
-                      class="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full rounded-full border py-3 px-[14px] text-base outline-none"
+                      className="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full rounded-full border py-3 px-[14px] text-base outline-none"
                     />
                   </div>
-                  <div class="mb-6">
+                  <div className="mb-6">
                     <input
                       type="text"
                       required
                       placeholder="Your Phone"
-                      class="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full rounded-full border py-3 px-[14px] text-base outline-none"
+                      className="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full rounded-full border py-3 px-[14px] text-base outline-none"
                     />
                   </div>
-                  <div class="mb-6">
+                  <div className="mb-6">
                     <textarea
                       rows="6"
                       required
                       placeholder="Your Message"
-                      class="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full resize-none rounded-lg border py-3 px-[14px] text-base outline-none"
+                      className="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full resize-none rounded-lg border py-3 px-[14px] text-base outline-none"
                     ></textarea>
                   </div>
                   <div>
                     <button
                       type="submit"
-                      class="w-full p-3 text-white transition border rounded-full border-primary bg-[blue] hover:bg-opacity-90"
+                      className="w-full p-3 text-white transition border rounded-full border-primary bg-[blue] hover:bg-opacity-90"
                     >
                       Send Message
                     </button>
                   </div>
                 </form>
                 <div>
-                  <span class="absolute -top-10 -right-9 z-[-1]">
+                  <span className="absolute -top-10 -right-9 z-[-1]">
                     <svg
                       width="100"
                       height="100"
@@ -175,7 +175,7 @@ export default function Contact() {
                       />
                     </svg>
                   </span>
-                  <span class="absolute -right-10 top-[90px] z-[-1]">
+                  <span className="absolute -right-10 top-[90px] z-[-1]">
                     <svg
                       width="34"
                       height="134"
@@ -395,7 +395,7 @@ export default function Contact() {
                       />
                     </svg>
                   </span>
-                  <span class="absolute -left-7 -bottom-7 z-[-1]">
+                  <span className="absolute -left-7 -bottom-7 z-[-1]">
                     <svg
                       width="107"
                       height="134"

@@ -3,7 +3,6 @@ import bar from "../../assets/bar.png";
 import { useInView } from "react-intersection-observer";
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import VisibilitySensor from 'react-visibility-sensor';
 
 export default function Services({ data }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,11 +29,11 @@ export default function Services({ data }) {
               <motion.div
                 ref={animationRef}
                 initial={{
-                  x: index % 2 === 0 ? -100 : 100, // Start position outside viewport (left or right)
+                  x: index % 2 === 0 ? -100 : 100, 
                   opacity: 0,
                 }}
                 animate={{
-                  x: isVisible ? 1 : 1, // Final position at 0 (left)
+                  x: isVisible ? 1 : 1, 
                   opacity: isVisible ? 1 : 1,
                 }}
                 transition={{ duration: 1.2 }}

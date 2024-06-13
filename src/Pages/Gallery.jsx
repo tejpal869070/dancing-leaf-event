@@ -19,7 +19,7 @@ export default function Gallery() {
         <div className=" container m-auto flex flex-wrap w-full justify-around py-6">
           {GalleryData &&
             GalleryData.map((item, index) => (
-              <div className="p-2 w-1/2 bg-gray-300 rounded-lg mb-2 ">
+              <div className="p-2  bg-gray-300 rounded-lg mb-2 ">
                 <img
                   alt="img1"
                   src={item.image}

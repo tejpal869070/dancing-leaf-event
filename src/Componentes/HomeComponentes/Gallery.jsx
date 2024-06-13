@@ -95,17 +95,19 @@ function Gallery() {
       id: 7,
       title: "Themed Parties",
       image: require("../../assets/customparty.webp"),
-    },{
+    },
+    {
       id: 7,
       title: "Themed Parties",
       image: require("../../assets/house-warmimg.jpg"),
-    },{
+    },
+    {
       id: 7,
       title: "Themed Parties",
       image: require("../../assets/banner3.jpg"),
     },
   ];
- 
+
   const [isVisible, setIsVisible] = useState(false);
   const { ref, inView } = useInView({ threshold: 0.5 });
   const animationRef = useRef(null);
@@ -168,11 +170,12 @@ function Gallery() {
               </motion.div>
             ))}
         </Slider>
-          </div> */}
-      <div class="columns-1 gap-5 container m-auto sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8">
-        {data && data.map((item, index)=>(
-          <img alt="img1" src={item.image} className="rounded-[30px]"/>
-        ))}
+          </div> */} 
+      <div className="columns-1 gap-5 container m-auto sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8">
+        {data &&
+          data.map((item, index) => (
+            <img alt="img1" src={item.image} className="rounded-[30px]" />
+          ))}
       </div>
     </div>
   );

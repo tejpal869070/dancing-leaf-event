@@ -29,7 +29,7 @@ export default function Home() {
     <div className="scroll-smooth">
       <Hero1 />
       {/* <Section1 data={data} /> */}
-      <AboutHero1/>
+      <AboutHero1 />
       {/* <Counter /> */}
       <Services data={data} />
       <Cake />
@@ -37,9 +37,7 @@ export default function Home() {
       <Instagram />
       <Gallery />
       <Video />
-      <div class="p-5 sm:p-8">
-    
-</div>
+      <div className="p-5 sm:p-8"></div>
     </div>
   );
 }
