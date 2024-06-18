@@ -15,55 +15,28 @@ export default function Services({ data }) {
     }
   }, [inView]);
   return (
-    <div className="py-6 mt-6 ">
-      <h1 className="text-4xl font-bold text-[#9d1f60] text-center mb-8">
-        Our Services
-      </h1>
-      <div className="container m-auto ">
-        <div
-          className="flex flex-wrap  flex-row mt-6  justify-around items-center"
-          ref={ref}
-        >
-          {data &&
-            data.map((item, index) => (
+    <div className="py-6 container m-auto">
+      <h1 className="text-center text-4xl courgette-regular">Our Services</h1>
+      <div className="flex flex-wrap justify-between justify-center mb-4 w-full">
+        {data &&
+          data.map((item, index) => (
+            <div key={index} className="w-full md:w-[48%] lg:w-[31%] mb-10" >
               <motion.div
                 ref={animationRef}
-                initial={{
-                  x: index % 2 === 0 ? -100 : 100, 
-                  opacity: 0,
-                }}
-                animate={{
-                  x: isVisible ? 1 : 1, 
-                  opacity: isVisible ? 1 : 1,
-                }}
-                transition={{ duration: 1.2 }}
-                key={index}
-                id="HomeServiceCard"
-                className="relative mb-6 zoomed-in card  w-[90%] lg:w-[28%] h-[300px] bg-cover rounded-lg"
-                style={{
-                  backgroundImage: `url(${item.image})`,
-                  backgroundPosition: "center",
-                }}
+                initial={{ opacity: 0, y: 50 }}
+                animate={
+                  isVisible ? { opacity: 1, y: 0 } : { opacity: 1, y: 50 }
+                }
+                transition={{ duration: 0.5, delay: index * 0.2 }}
               >
-                <div
-                  id="HomeServiceCardInner"
-                  className="  absolute w-full h-full poetsen-one-regular text-center bg-[#00000036] flex flex-col justify-center items-center text-[25px] font-bold text-[#9d1f60] py-4 rounded-b-lg m-auto w-full"
-                >
-                  <p
-                    className="text-[white]"
-                    style={{ textShadow: "1px 0px 9px  black" }}
-                  >
-                    {item.title}
-                  </p>
-                  <img
-                    alt="bar"
-                    src={bar}
-                    style={{ filter: "drop-shadow(2px 4px 6px black)" }}
-                  />
+                <div className="border-2  relative   p-1 rounded-lg shadow-lg h-60 overflow-hidden">
+                  <img alt="servie" src={item.image} className=" h-full w-full   object-cover	" />
+                  <div className="absolute   z-[999]  align-center  justify-center w-[90%] h-[90%] m-auto inset-0 p-2 text border-4"/> 
                 </div>
+                <p className="text-center  courgette-regular mt-2 text-2xl">{item.title}</p>
               </motion.div>
-            ))}
-        </div>
+            </div>
+          ))}
       </div>
     </div>
   );

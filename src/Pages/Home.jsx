@@ -9,6 +9,7 @@ import { HomePageDummyData } from "../Data/HomePage";
 import Testimonials from "../Componentes/HomeComponentes/Testimonials";
 import Instagram from "../Componentes/HomeComponentes/Instagram";
 import AboutHero1 from "../Componentes/AboutComponentes/AboutHero1";
+import AboutUsHome from "../Componentes/HomeComponentes/AboutUsHome";
 
 export default function Home() {
   const [data, setData] = useState();
@@ -29,9 +30,10 @@ export default function Home() {
     <div className="scroll-smooth">
       <Hero1 />
       {/* <Section1 data={data} /> */}
-      <AboutHero1 />
+      {/* <AboutHero1 /> */}
       {/* <Counter /> */}
       <Services data={data} />
+      <AboutUsHome/>
       <Cake />
       <Testimonials />
       <Instagram />

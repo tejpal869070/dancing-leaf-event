@@ -28,23 +28,23 @@ export default function Cake() {
   };
   return (
     <div
-      className="container m-auto mt-6"
+      className="container border-lg m-auto mt-6 bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-orange-900 via-amber-100 to-orange-900"
       style={{
-        backgroundImage: `url(${gif1})`,
-        backgroundPosition: "center",
-        backgroundColor: "#fff8daf2",
+        // backgroundImage: `url(${gif1})`,
+        // backgroundPosition: "center",
+        // backgroundColor: "#fff8daf2",
       }}
     >
       <div
-        className="flex flex-wrap items-center justify-center justiy-between "
-        style={{ border: "6px solid #e5687075" }}
+        className="flex flex-wrap items-center justify-center justiy-between border-lg"
+        // style={{ border: "6px solid #e5687075" }}
         ref={ref}
       >
         <div className="w-[98%] lg:w-[45%] px-6">
-          <h1 className="mb-6 text-[42px]  text-[#9d1f60] norican-regular font-[800]">
+          <h1 className="mb-6 text-[42px]  text-[#9d1f60] courgette-regular font-[800]">
             Customized Cake
           </h1>
-          <p className="text-lg font-semibold">
+          <p className="text-lg  rubik-font text-xl">
             Indulge in the sweetest treat with our made-to-order custom cakes!
             From intricate designs to mouthwatering flavors, each cake is
             crafted to perfection, just for you.
