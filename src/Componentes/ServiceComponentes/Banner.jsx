@@ -1,17 +1,26 @@
 import React from "react";
-import bg1 from "../../assets/bg-7.jpg";
-import AnimatedHeadings from "./AnimatedHeading";
+import { HomePageDummyData } from "../../Data/HomePage";
+import img1 from "../../assets/gender-reveal.jpg"
 
 export default function Banner() {
   return (
-    <div>
-      <div
-        className=" relative w-[100vw] h-[60vh] lg:h-[80vh] bg-black bg-no-repeate"
-        style={{ backgroundImage: `url(${bg1})`, backgroundSize: "cover",  }}
-      ></div>
-      <div className="absolute  flex flex-col items-center justify-center top-0 w-full h-[70%] lg:h-full">
-        <AnimatedHeadings />
+    <div className="container m-auto pt-40">
+      <div>
+        <p className="rubik-font text-4xl">
+          Dancing Leaf Events : We ready with all the love to make the best out
+          of your special days 🌟💫 Event planner | Rental Items | Catering
+        </p>
+        <p className="mt-10 text-lg">
+          At Dancing Leaf Events, we're your ultimate event planning partner,
+          bringing dreams to reality. Whether it's a corporate affair, wedding
+          extravaganza, or special milestone, we ensure every detail shines.
+          With our passion for perfection and personalized touch, your event is
+          guaranteed to be memorable. Let's create something extraordinary
+          together at Dancing Leaf Events!
+        </p>
       </div>
+
+      
     </div>
   );
 }

@@ -5,8 +5,7 @@ import bg2 from "../assets/bg-valvet.jpg"
 export default function Contact() {
   return (
     <div
-      style={{
-        backgroundImage: `url(${gif1})`,
+      style={{ 
         backgroundPosition: "center",
         backgroundColor: "#e5e5e5",
       }}
@@ -115,7 +114,7 @@ export default function Contact() {
               </div>
             </div>
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
-              <div className="relative p-8 bg-cover bg-no-repeat rounded-lg shadow-lg dark:bg-dark-2 sm:p-12" style={{backgroundImage:`url(${bg2})`}}>
+              <div className="relative p-8 bg-cover bg-no-repeat rounded-lg shadow-lg dark:bg-dark-2 sm:p-12 bg-white"  >
                 <form>
                   <div className="mb-6">
                     <input

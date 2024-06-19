@@ -4,7 +4,7 @@ import bg1 from "../../assets/homebg.jpg"
 
 export default function AboutHero1() {
   return (
-    <div className=" relative m-auto bg-fixed bg-cover pt-6" style={{backgroundImage:`url(${bg1})`}}>
+    <div className=" relative m-auto bg-fixed bg-cover pt-6"  >
       <div className="flex container m-auto flex-wrap-reverse bg-[#f5f5f561]   items-center justify-around justify-center py-6">
         <div className=" relative py-12 lg:px-20 w-full lg:w-[60%] m-auto   flex flex-col items-center justify-center">
           <p className="text-4xl font-bold norican-regular text-left text-[#9d1f60] ">Saloni Mishra</p>

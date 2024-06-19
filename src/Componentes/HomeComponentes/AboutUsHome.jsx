@@ -8,14 +8,12 @@ export default function AboutUsHome() {
     <div className="container m-auto pt-20  px-4 lg:px-0">
       <div className="flex flex-wrap justify-between ">
         <div className="w-full lg:w-[50%]">
-          <p className=" poetsen-one-regular text-lg text-[#F28B90]">
-            About us
-          </p>
-          <h2 className=" courgette-regular text-4xl mt-6">
+          
+          <h2 className=" rubik-font  text-4xl mt-6">
             We Plan & Design Weddings That Capture the Imagination
           </h2>
           <img alt="branch" src={branchimg} className="w-40" />
-          <p className="mt-6">
+          <p className="mt-6 text-xl">
             Weddings are significant events in people’s lives and as such,
             couples are often willing to spend considerable amount of money to
             ensure that their weddings are well-organized. Wedding planners are
@@ -36,7 +34,7 @@ export default function AboutUsHome() {
       <div className="relative w-full h-[60vh]   overflow-hidden flex justify-center items-center py-10">
         <img alt="img2" src={bannerimg1} className="w-full h-full object-cover" />
         <div className="absolute z-999 flex flex-col justify-center  items-center w-[99%] h-[80%] m-auto inset-0 bg-[#a7a7a770] ">
-          <h2 className="courgette-regular  text-center text-[black] text-6xl text-white">
+          <h2 className="rubik-font   text-center text-[black] text-6xl text-white">
             We Create Unforgettable <br/> Experiences
           </h2>
         </div>

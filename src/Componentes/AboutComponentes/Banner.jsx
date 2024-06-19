@@ -11,7 +11,7 @@ export default function Banner() {
         style={{ backgroundImage: `url(${bg1})`, backgroundSize: "cover" }}
       >
         <div className="w-[90%] lg:w-1/2  flex flex-col justify-center items-center  ">
-          <p className="text-[#9d1f60] font-bold text-7xl norican-regular" style={{textShadow:"4px 4px 4px white"}}>
+          <p className="text-[#9d1f60] font-bold text-7xl rubik-font" style={{textShadow:"4px 4px 4px white"}}>
             Where imagination meets reality.
           </p>
           <p className="text-xl mt-4  lg:pr-12 font-semibold" style={{textShadow:"5px 5px 5px white"}}>

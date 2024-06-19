@@ -9,6 +9,7 @@ export default function Header2() {
   const [isOpened, setOpened] = useState(false);
   const { pathname } = useLocation();
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isServicesHovered, setIsServicesHovered] = useState(false);
 
   const openMenu = () => {
     setOpened(!isOpened);
@@ -66,10 +67,37 @@ export default function Header2() {
             </Link>
             <Link
               aria-current="page"
-              className="inline-block font-bold rounded-lg px-2 py-1 nav-links text-lg text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
-              to={"/services"}
+              className="inline-block font-bold rounded-lg px-2 py-1 nav-links text-lg text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900 relative"
+               
+              onMouseEnter={() => setIsServicesHovered(true)}
+              onMouseLeave={() => setIsServicesHovered(false)}
             >
               Services
+              {isServicesHovered && (
+                <div
+                  className="absolute top-full left-0 w-48 bg-white shadow-md py-2"
+                  style={{ marginTop: 5 }} // Add this to position the dropdown below the Services tab
+                >
+                  <Link
+                    to={{ pathname: "/services", search: "?service=private" }}
+                    className="block px-4 py-2 text-gray-900 hover:bg-gray-100"
+                  >
+                    Private
+                  </Link>
+                  <Link
+                    to={{ pathname: "/services", search: "?service=corporate" }}
+                    className="block px-4 py-2 text-gray-900 hover:bg-gray-100"
+                  >
+                    Corporate
+                  </Link>
+                  <Link
+                    to={{ pathname: "/services", search: "?service=wedding" }}
+                    className="block px-4 py-2 text-gray-900 hover:bg-gray-100"
+                  >
+                    Wedding
+                  </Link>
+                </div>
+              )}
             </Link>
             <Link
               aria-current="page"
@@ -85,17 +113,12 @@ export default function Header2() {
             >
               Gallery
             </Link>
-            <Link
-              className="inline-block font-bold rounded-lg px-2 py-1 nav-links text-lg text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
-              to={"/packages"}
-            >
-              Packages
-            </Link>
+
             <Link
               className="inline-block font-bold rounded-lg px-2 py-1 nav-links text-lg text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
               to={"/contact"}
             >
-            Enquiry
+              Enquiry
             </Link>
           </div>
 
@@ -121,9 +144,7 @@ export default function Header2() {
             <Link to={"/services"} className="text-xl font-semibold flex gap-1">
               <MdLabelImportant className="mt-1" /> Services
             </Link>
-            <Link to={"/packages"} className="text-xl font-semibold flex gap-1">
-              <MdLabelImportant className="mt-1" /> Packages
-            </Link>
+
             <Link to={"/gallery"} className="text-xl font-semibold flex gap-1">
               <MdLabelImportant className="mt-1" /> Gallery
             </Link>

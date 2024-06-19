@@ -32,13 +32,13 @@ export default function Home() {
       {/* <Section1 data={data} /> */}
       {/* <AboutHero1 /> */}
       {/* <Counter /> */}
-      <Services data={data} />
       <AboutUsHome/>
+      <Services data={data} />
       <Cake />
       <Testimonials />
       <Instagram />
       <Gallery />
-      <Video />
+       {/* <Video />  */}
       <div className="p-5 sm:p-8"></div>
     </div>
   );
