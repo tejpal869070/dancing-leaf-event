@@ -18,7 +18,7 @@ export default function Footer() {
         </div>
         <div className="mt-8">
           <p className=" text-lg font-semibold">Contact Information</p>
-          <p className="">Bay Area California</p>
+          <p className="">Bay Area California </p>
           <p className="">Phone: +1-669-3508979</p>
           <p className="">Email: hello@dancingleafevents.com</p>
         </div>

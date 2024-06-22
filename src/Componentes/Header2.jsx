@@ -11,6 +11,12 @@ export default function Header2() {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isServicesHovered, setIsServicesHovered] = useState(false);
 
+  const [mobileService, setMobieService] = useState(false);
+
+  const openMobileServiceDrop = () => {
+    setMobieService(!mobileService);
+  };
+
   const openMenu = () => {
     setOpened(!isOpened);
   };
@@ -18,6 +24,8 @@ export default function Header2() {
   useEffect(() => {
     setOpened(false);
   }, [pathname]);
+
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,7 +76,6 @@ export default function Header2() {
             <Link
               aria-current="page"
               className="inline-block font-bold rounded-lg px-2 py-1 nav-links text-lg text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900 relative"
-               
               onMouseEnter={() => setIsServicesHovered(true)}
               onMouseLeave={() => setIsServicesHovered(false)}
             >
@@ -76,7 +83,7 @@ export default function Header2() {
               {isServicesHovered && (
                 <div
                   className="absolute top-full left-0 w-48 bg-white shadow-md py-2"
-                  style={{ marginTop: 5 }} // Add this to position the dropdown below the Services tab
+                  style={{ marginTop: 2 }} // Add this to position the dropdown below the Services tab
                 >
                   <Link
                     to={{ pathname: "/services", search: "?service=private" }}
@@ -141,8 +148,36 @@ export default function Header2() {
             <Link to={"/about-us"} className="text-xl font-semibold flex gap-1">
               <MdLabelImportant className="mt-1" /> About
             </Link>
-            <Link to={"/services"} className="text-xl font-semibold flex gap-1">
+            <Link
+              onClick={() => openMobileServiceDrop()}
+              className="text-xl font-semibold flex gap-1 relative"
+            >
               <MdLabelImportant className="mt-1" /> Services
+              {mobileService && (
+                <div
+                  className="absolute top-full left-0 w-48 bg-white shadow-md py-2"
+                  style={{ marginTop: 5 }} // Add this to position the dropdown below the Services tab
+                >
+                  <Link
+                    to={{ pathname: "/services", search: "?service=private" }}
+                    className="block px-4 py-2 text-gray-900 hover:bg-gray-100"
+                  >
+                    Private
+                  </Link>
+                  <Link
+                    to={{ pathname: "/services", search: "?service=corporate" }}
+                    className="block px-4 py-2 text-gray-900 hover:bg-gray-100"
+                  >
+                    Corporate
+                  </Link>
+                  <Link
+                    to={{ pathname: "/services", search: "?service=wedding" }}
+                    className="block px-4 py-2 text-gray-900 hover:bg-gray-100"
+                  >
+                    Wedding
+                  </Link>
+                </div>
+              )}
             </Link>
 
             <Link to={"/gallery"} className="text-xl font-semibold flex gap-1">

@@ -4,7 +4,7 @@ import img1 from "../../assets/gender-reveal.jpg"
 
 export default function Banner() {
   return (
-    <div className="container m-auto pt-40">
+    <div className="container m-auto pt-40 px-4">
       <div>
         <p className="rubik-font text-4xl">
           Dancing Leaf Events : We ready with all the love to make the best out

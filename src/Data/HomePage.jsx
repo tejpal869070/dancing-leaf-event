@@ -7,7 +7,7 @@ export const HomePageDummyData = [
     {
       id: 2,
       title: "Corporate Events",
-      image: require("../assets/corporate.webp"),
+      image: require("../assets/prodlumch.png"),
     },
     {
       id: 3,

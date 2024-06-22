@@ -71,7 +71,7 @@ export default function Testimonials() {
 
   
   return (
-    <div className="overflow-x-hidden overflow-y-hidden   rounded-lg    my-20 container   m-auto flex flex-col lg:flex-row lg:space-x-8">
+    <div className="overflow-x-hidden overflow-y-hidden   rounded-lg    my-10 container   m-auto flex flex-col lg:flex-row lg:space-x-8">
       <div className="w-full   py-6  slider-container  m-auto">
         <Slider {...settings}>
           {data &&

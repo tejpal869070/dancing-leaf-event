@@ -9,6 +9,12 @@ export default function ServiceDropdown({ serviceName }) {
     setIsOpen(!isOpen);
   };
 
+  const serviceTypes = [
+    { key: "private", label: "Private" },
+    { key: "corporate", label: "Corporate" },
+    { key: "wedding", label: "Wedding" },
+  ];
+
   useEffect(() => {
     const handleOutsideClick = (event) => {
       if (!event.target.closest(".relative.inline-block")) {
@@ -22,34 +28,18 @@ export default function ServiceDropdown({ serviceName }) {
   }, [isOpen]);
 
   return (
-    <div className="relative inline-block">
-      <button
-        onClick={handleClick}
-        className="bg-gray-500 flex gap-4 align-center items-center hover:bg-black text-white font-bold py-2 px-4 rounded"
-      >
-        {serviceName} <FaChevronDown />
-      </button>
-      {isOpen && (
-        <ul
-          className={`absolute w-full top-0 right-0 mt-10 w-48 bg-white rounded shadow-md ${
-            isOpen ? "opacity-100" : "opacity-0"
-          }`}
-          style={{
-            transition: "opacity 0.2s ease-in-out",
-          }}
+    <div className="relative flex justify-around w-full  mt-6 bg-[#ced3ff3d] py-4 ">
+      {serviceTypes.map((service) => (
+        <Link
+          key={service.key}
+          className={`${
+            serviceName === service.key ? "bg-[#e4676f] text-white" : "bg-white text-black hover:bg-[#e58b9159]"
+          } py-3 w-60 hover:shadow-lg  text-center text-xl font-semibold  border-2 border-[#e4676f] rounded-lg`}
+          to={{ pathname: "/services", search: `?service=${service.key}` }}
         >
-          {/* Add your dropdown items here */}
-          <Link to={{ pathname: "/services", search: "?service=private" }}>
-            <li className="py-2 px-4 hover:bg-gray-100">Private</li>
-          </Link>
-          <Link to={{ pathname: "/services", search: "?service=corporate" }}>
-            <li className="py-2 px-4 hover:bg-gray-100">Corporate</li>
-          </Link>
-          <Link to={{ pathname: "/services", search: "?service=wedding" }}>
-            <li className="py-2 px-4 hover:bg-gray-100">Wedding</li>
-          </Link>
-        </ul>
-      )}
+          {service.label}
+        </Link>
+      ))}
     </div>
   );
 }

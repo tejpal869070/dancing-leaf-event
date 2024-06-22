@@ -35,9 +35,9 @@ export default function Home() {
       <AboutUsHome/>
       <Services data={data} />
       <Cake />
-      <Testimonials />
       <Instagram />
       <Gallery />
+      <Testimonials />
        {/* <Video />  */}
       <div className="p-5 sm:p-8"></div>
     </div>

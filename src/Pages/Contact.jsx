@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import gif1 from "../assets/gif4.gif";
-import bg2 from "../assets/bg-valvet.jpg"
+import bg2 from "../assets/bg-valvet.jpg";
 
 export default function Contact() {
+
+  const[name,setName] = useState('')
+  const[email,setEmail] = useState('')
+  const[message,setMessage] = useState('')
+  const[phone,setPhone] = useState('')
+
+
+  const formData = {
+    name,
+    email,
+    message,
+    phone,
+  };
+
+  const handlesubmit=(e)=>{
+    e.preventDefault()
+    console.log(formData)
+  }
+ 
+
   return (
     <div
-      style={{ 
+      style={{
         backgroundPosition: "center",
         backgroundColor: "#e5e5e5",
       }}
@@ -22,7 +42,11 @@ export default function Contact() {
                   GET IN TOUCH WITH US
                 </h2>
                 <p className="text-base leading-relaxed text-body-color dark:text-dark-6 mb-9">
-                At Dancing Leaf , we craft unforgettable experiences tailored to your vision. With meticulous planning and seamless execution, we transform your events into cherished memories. Let us bring your ideas to life, leaving you free to enjoy every moment.
+                  At Dancing Leaf , we craft unforgettable experiences tailored
+                  to your vision. With meticulous planning and seamless
+                  execution, we transform your events into cherished memories.
+                  Let us bring your ideas to life, leaving you free to enjoy
+                  every moment.
                 </p>
                 <div className="mb-8 flex w-full max-w-[370px]">
                   <div className="bg-primary/5 text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded sm:h-[70px] sm:max-w-[70px]">
@@ -44,7 +68,7 @@ export default function Contact() {
                       Our Location
                     </h4>
                     <p className="text-base text-body-color dark:text-dark-6">
-                      Tracy, California
+                      Bay Area California
                     </p>
                   </div>
                 </div>
@@ -107,19 +131,21 @@ export default function Contact() {
                       Email Address
                     </h4>
                     <p className="text-base text-body-color dark:text-dark-6">
-                      info@dancingleafevents.com
+                      hello@dancingleafevents.com
                     </p>
                   </div>
                 </div>
               </div>
             </div>
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
-              <div className="relative p-8 bg-cover bg-no-repeat rounded-lg shadow-lg dark:bg-dark-2 sm:p-12 bg-white"  >
-                <form>
+              <div className="relative p-8 bg-cover bg-no-repeat rounded-lg shadow-lg dark:bg-dark-2 sm:p-12 bg-white">
+                <form onSubmit={(e)=>handlesubmit(e)}>
                   <div className="mb-6">
                     <input
                       type="text"
                       placeholder="Your Name"
+                      value={name}
+                      onChange={(e)=>setName(e.target.value)}
                       required
                       className="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full rounded-full border py-3 px-[14px] text-base outline-none"
                     />
@@ -127,6 +153,8 @@ export default function Contact() {
                   <div className="mb-6">
                     <input
                       type="email"
+                      value={email}
+                      onChange={(e)=>setEmail(e.target.value)}
                       required
                       placeholder="Your Email"
                       className="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full rounded-full border py-3 px-[14px] text-base outline-none"
@@ -137,6 +165,8 @@ export default function Contact() {
                       type="text"
                       required
                       placeholder="Your Phone"
+                      value={phone}
+                      onChange={(e)=>setPhone(e.target.value)}
                       className="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full rounded-full border py-3 px-[14px] text-base outline-none"
                     />
                   </div>
@@ -145,6 +175,8 @@ export default function Contact() {
                       rows="6"
                       required
                       placeholder="Your Message"
+                      value={message}
+                      onChange={(e)=>setMessage(e.target.value)}
                       className="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full resize-none rounded-lg border py-3 px-[14px] text-base outline-none"
                     ></textarea>
                   </div>

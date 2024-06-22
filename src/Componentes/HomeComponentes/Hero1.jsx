@@ -32,8 +32,9 @@ export default function Hero1() {
           Turn Your Dream Event into a Reality
         </p>
         <p className="rubik-font mt-4 text-xl">
-          Weddings are significant events in people’s lives and as such, couples
-          are often willing to spend considerable amount of money to ensure{" "}
+          Here unforgettable events come to life. With a passion for precision
+          and creativity, we specialize in crafting seamless experiences
+          tailored to your vision.
         </p>
       </div>
     </div>

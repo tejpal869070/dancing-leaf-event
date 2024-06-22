@@ -7,14 +7,15 @@ import bg10 from "../assets/bg-valvet.jpg";
 
 const RentalItem = ({ item }) => {
   return (
-    <div className="bg-[#ed5c648a]  lg:w-full rounded-b-lg overflow-hidden">
+    <div className="bg-[#ed5c648a]  lg:w-full rounded-b-lg rounded-b-xl overflow-hidden">
       <img
         src={item.image}
         alt={item.name}
-        className="w-full h-[300px] p-1 transition-transform duration-300 transform scale-100 hover:scale-110"
+        className="w-full h-[200px] p-1 transition-transform duration-300 transform scale-100 hover:scale-110"
       />
-      <h2 className="pl-2 text-lg font-[500]">{item.name}</h2>
-      <p className="pl-2 pb-1">${item.price}/day</p>
+      <h2 className="pl-2 text-lg text-center my-2 text-xl font-[500]">
+        {item.name}
+      </h2>
     </div>
   );
 };
@@ -31,8 +32,20 @@ const Rentals = () => {
   }, [inView]);
 
   return (
-    <div>
-      <div className="flex flex-wrap container m-auto pt-40" ref={ref}>
+    <div className="pt-40">
+      <div className="container m-auto">
+        <p className="text-black font-semibold text-center text-4xl md:text-4xl">
+          Looking for items for your event ?
+        </p>
+        <p className="mt-4 text-center text-xl ">
+          Enhance your event with our wide range of rental items. From elegant
+          decor to essential equipment, we provide everything you need for a
+          seamless and memorable occasion. Enjoy hassle-free rentals and
+          exceptional service, making your event planning experience stress-free
+          and successful.
+        </p>
+      </div>
+      <div className="flex flex-wrap container m-auto mt-10" ref={ref}>
         {rentalItems.map((item, index) => (
           <motion.div
             ref={animationRef}
@@ -43,7 +56,7 @@ const Rentals = () => {
             transition={{ duration: 0.8 }}
             key={index}
             className={`
-          w-full
+          w-1/2
           sm:w-1/2
           md:w-1/3
           lg:w-1/4

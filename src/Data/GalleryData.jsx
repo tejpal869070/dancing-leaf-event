@@ -1,66 +1,66 @@
 export const GalleryData = [
   {
     id: 1,
-    image: require("../assets/banner-1.jpg"),
+    image : require("../assets/photos/img1.jpg")
   },
   {
     id: 1,
-    image: require("../assets/banner2.jpg"),
+    image : require("../assets/photos/img2.jpg")
   },
   {
     id: 1,
-    image: require("../assets/banner3.jpg"),
+    image : require("../assets/photos/img3.JPG")
   },
   {
     id: 1,
-    image: require("../assets/banner4.webp"),
+    image : require("../assets/photos/img4.jpg")
   },
   {
     id: 1,
-    image: require("../assets/bg-2.jpg"),
+    image : require("../assets/photos/img5.jpg")
   },
   {
     id: 1,
-    image: require("../assets/bg-4.jpg"),
+    image : require("../assets/photos/img6.jpg")
   },
   {
     id: 1,
-    image: require("../assets/bg-5.jpg"),
+    image : require("../assets/photos/img7.jpg")
   },
   {
     id: 1,
-    image: require("../assets/bg-6.png"),
+    image : require("../assets/photos/img8.jpg")
   },
   {
     id: 1,
-    image: require("../assets/bg-7.jpg"),
+    image : require("../assets/photos/img9.jpg")
   },
   {
     id: 1,
-    image: require("../assets/corporate-2.jpg"),
+    image : require("../assets/photos/img10.jpg")
   },
   {
     id: 1,
-    image: require("../assets/corporate.webp"),
+    image : require("../assets/photos/img11.jpg")
   },
   {
     id: 1,
-    image: require("../assets/birthday-2.jpg"),
+    image : require("../assets/photos/img12.jpg")
+  },  
+  {
+    id: 1,
+    image : require("../assets/photos/img15.jpg")
+  }, 
+  {
+    id: 1,
+    image : require("../assets/photos/img17.jpg")
   },
   {
     id: 1,
-    image: require("../assets/birthday.jpg"),
+    image : require("../assets/photos/img18.jpg")
   },
   {
     id: 1,
-    image: require("../assets/banner2.jpg"),
-  },
-  {
-    id: 1,
-    image: require("../assets/banner3.jpg"),
-  },
-  {
-    id: 1,
-    image: require("../assets/banner4.webp"),
+    image : require("../assets/photos/img19.jpg")
   },
 ];

@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useInView } from "react-intersection-observer";
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import banner1 from "../../assets/officialbanner.jpeg"
 
 function Gallery() {
   const settings = {
@@ -123,59 +124,16 @@ function Gallery() {
         Portfolio
       </p>
       <div className="h-[4px] rounded-full w-[60px] m-auto bg-black mb-6"></div>
-      {/*<div className="slider-container  w-[90%] m-auto shadow-inner ">
-        <Slider {...settings}>
-          {data &&
-            data.map((item, index) => (
-              <motion.div
-                ref={animationRef}
-                animate={{
-                  scale: isVisible ? 1 : 0,
-                  opacity: isVisible ? 1 : 0,
-                }}
-                transition={{ duration: 0.5 }}
-                className="p-2"
-              >
-                <img
-                  alt="images"
-                  src={item.image}
-                  className="h-[200px] ml-4 w-full rounded-lg"
-                  loading="lazy"
-                />
-              </motion.div>
-            ))}
-        </Slider>
-      </div>
-      <div className="slider-container  w-[90%] m-auto shadow-inner ">
-        <Slider
-          {...settings2}
-          className="bg-gradient-to-r from-white via-transparent to-transparent"
-        >
-          {data &&
-            data.map((item, index) => (
-              <motion.div
-                ref={animationRef}
-                animate={{
-                  scale: isVisible ? 1 : 0,
-                  opacity: isVisible ? 1 : 0,
-                }}
-                transition={{ duration: 0.5 }}
-                className="p-2"
-              >
-                <img
-                  alt="images"
-                  src={item.image}
-                  className="h-[300px] ml-4 w-full rounded-lg"
-                />
-              </motion.div>
-            ))}
-        </Slider>
-          </div> */} 
+      
       <div className="columns-1 gap-5 container m-auto sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8">
         {data &&
           data.map((item, index) => (
             <img alt="img1" src={item.image} className="rounded-[30px]" />
           ))}
+      </div>
+
+      <div className="container m-auto border-4 rounded-lg border-gray-500 mt-10 shadow-lg">
+      <img alt="banner" src={banner1}/>
       </div>
     </div>
   );

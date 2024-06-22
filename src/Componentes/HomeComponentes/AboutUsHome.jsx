@@ -5,12 +5,12 @@ import bannerimg1 from "../../assets/photos/img2.jpg";
 
 export default function AboutUsHome() {
   return (
-    <div className="container m-auto pt-20  px-4 lg:px-0">
+    <div className="container m-auto  md:pt-12 lg:pt-20  px-4 lg:px-0">
       <div className="flex flex-wrap justify-between ">
         <div className="w-full lg:w-[50%]">
           
           <h2 className=" rubik-font  text-4xl mt-6">
-            We Plan & Design Weddings That Capture the Imagination
+            We Plan & Design extraordinary events that Capture the Imagination
           </h2>
           <img alt="branch" src={branchimg} className="w-40" />
           <p className="mt-6 text-xl">
@@ -20,11 +20,7 @@ export default function AboutUsHome() {
             often used by couples who work long hours and have little spare time
             available for sourcing and managing wedding venues.
           </p>
-          <div className="mt-12">
-            <button className="px-6 py-3 bg-[#ebaf9d] rounded-lg  font-bold text-[#272727] ">
-              CONTACT
-            </button>
-          </div>
+           
         </div>
         <div className="w-full lg:w-[40%]">
           <img alt="slider" src={HomePageDummyData[5].image} />
