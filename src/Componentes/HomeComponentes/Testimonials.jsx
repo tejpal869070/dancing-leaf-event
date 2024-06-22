@@ -69,28 +69,12 @@ export default function Testimonials() {
     ],
   };
 
-  
   return (
-    <div className="overflow-x-hidden overflow-y-hidden   rounded-lg    my-10 container   m-auto flex flex-col lg:flex-row lg:space-x-8">
-      <div className="w-full   py-6  slider-container  m-auto">
-        <Slider {...settings}>
-          {data &&
-            data.map((item, index) => (
-              <div className="flex  w-full text-center flex-col items-center justify-center">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="h-20 mb-6 w-20 rounded-full m-auto"
-                />
-                <h1 className="text-2xl font-normal w-[80%] text-black rubik-font text-center m-auto ">
-                  {" "}
-                  {item.description}{" "}
-                </h1>
-                <img src={stars} alt={item.title} className="h-16 m-auto" />
-              </div>
-            ))}
-        </Slider>
-      </div>
+    <div> 
+      <div
+        class="elfsight-app-ad1b6999-e003-4318-b3d1-90c88b8df55a"
+        data-elfsight-app-lazy
+      ></div>
     </div>
   );
 }

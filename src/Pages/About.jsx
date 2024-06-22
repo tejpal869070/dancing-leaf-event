@@ -39,7 +39,7 @@ export default function About() {
         <div className="w-full lg:w-[45%] flex flex-col justify-center     px-4 lg:px-10">
           <p className="text-3xl rubik-font">Saloni Mishra</p>
           <p className="mt-2 mb-4">Entrepreneur</p>
-          <p className="text-lg  ">
+          <p className="text-lg text-justify ">
             We are a dedicated to organising events & parties , passionate about
             creating memorable experiences. With a focus on detail and customer
             satisfaction, we strive to make every event unique and

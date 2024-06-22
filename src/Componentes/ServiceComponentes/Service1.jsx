@@ -52,7 +52,7 @@ export default function Service1() {
                 {data.heading}
               </h1>
               <div class="max-w-4xl">
-                <p class="mt-5 text-black text-lg">{data.detail}</p>
+                <p class="mt-5 text-black text-lg text-justify">{data.detail}</p>
               </div>
             </div>
             <div  className="w-full lg:w-[35%]">
@@ -64,7 +64,7 @@ export default function Service1() {
       <p className="rubik-font text-2xl mt-20">
         Explore Dancing Leaf Events Services: {data.name}
       </p>
-      <div className=" mt-10  justify-between flex flex-wrap overflow-x-hidden">
+      <div className=" mt-10   lg:gap-[5%] flex flex-wrap overflow-x-hidden">
         {data &&
           data.services.map((item, index) => (
             <div className="w-1/2 lg:w-[30%] shadow-lg mb-6   ">

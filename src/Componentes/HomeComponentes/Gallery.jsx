@@ -5,6 +5,7 @@ import { useInView } from "react-intersection-observer";
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import banner1 from "../../assets/officialbanner.jpeg"
+import { GalleryData } from "../../Data/GalleryData";
 
 function Gallery() {
   const settings = {
@@ -46,68 +47,7 @@ function Gallery() {
       },
     ],
   };
-  const data = [
-    {
-      id: 1,
-      title: "Birthday Parties",
-      image: require("../../assets/birthday.jpg"),
-    },
-    {
-      id: 2,
-      title: "Corporate Parties",
-      image: require("../../assets/corporate.webp"),
-    },
-    {
-      id: 3,
-      title: "Holiday Parties",
-      image: require("../../assets/img2.jpg"),
-    },
-    {
-      id: 4,
-      title: "Charity Parties",
-      image: require("../../assets/charity.jpg"),
-    },
-    {
-      id: 5,
-      title: "Wedding Ceremonies",
-      image: require("../../assets/wedding.jpg"),
-    },
-    {
-      id: 6,
-      title: "Themed Parties",
-      image: require("../../assets/themed.webp"),
-    },
-    {
-      id: 7,
-      title: "Themed Parties",
-      image: require("../../assets/rent-5.jpg"),
-    },
-    {
-      id: 7,
-      title: "Themed Parties",
-      image: require("../../assets/themed.webp"),
-    },
-    {
-      id: 7,
-      title: "Themed Parties",
-      image: require("../../assets/midnight.jpg"),
-    },
-    {
-      id: 7,
-      title: "Themed Parties",
-      image: require("../../assets/customparty.webp"),
-    },
-    {
-      id: 7,
-      title: "Themed Parties",
-      image: require("../../assets/house-warmimg.jpg"),
-    },
-    {
-      id: 7,
-      title: "Themed Parties",
-      image: require("../../assets/banner3.jpg"),
-    },
-  ];
+   
 
   const [isVisible, setIsVisible] = useState(false);
   const { ref, inView } = useInView({ threshold: 0.5 });
@@ -126,8 +66,8 @@ function Gallery() {
       <div className="h-[4px] rounded-full w-[60px] m-auto bg-black mb-6"></div>
       
       <div className="columns-1 gap-5 container m-auto sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8">
-        {data &&
-          data.map((item, index) => (
+        {GalleryData &&
+          GalleryData.map((item, index) => (
             <img alt="img1" src={item.image} className="rounded-[30px]" />
           ))}
       </div>

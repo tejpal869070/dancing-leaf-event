@@ -29,7 +29,7 @@ export default function Hero1() {
     >
       <div className="w-full lg:w-[50%] px-10 ">
         <p className="rubik-font  text-6xl">
-          Turn Your Dream Event into a Reality
+          Turn Your <span className="text-[#e4686f] font-semibold">Dream Event into</span> a Reality
         </p>
         <p className="rubik-font mt-4 text-xl">
           Here unforgettable events come to life. With a passion for precision

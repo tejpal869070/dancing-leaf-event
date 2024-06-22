@@ -1,5 +1,5 @@
 export const GalleryData = [
-  {
+  { 
     id: 1,
     image : require("../assets/photos/img1.jpg")
   },

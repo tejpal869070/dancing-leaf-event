@@ -11,7 +11,7 @@ const RentalItem = ({ item }) => {
       <img
         src={item.image}
         alt={item.name}
-        className="w-full h-[200px] p-1 transition-transform duration-300 transform scale-100 hover:scale-110"
+        className="w-full h-[200px] lg:h-[300px] p-1 transition-transform duration-300 transform scale-100 hover:scale-110"
       />
       <h2 className="pl-2 text-lg text-center my-2 text-xl font-[500]">
         {item.name}

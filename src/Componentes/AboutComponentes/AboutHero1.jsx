@@ -9,7 +9,7 @@ export default function AboutHero1() {
         <div className=" relative py-12 lg:px-20 w-full lg:w-[60%] m-auto   flex flex-col items-center justify-center">
           <p className="text-4xl font-bold norican-regular text-left text-[#9d1f60] ">Saloni Mishra</p>
           <p className="mt-4 text-lg font-semibold">Entrepreneur</p>
-          <p className="font-[sans-serif] font-medium text-xl mt-4 px-2">
+          <p className="font-[sans-serif] font-medium text-justify text-xl mt-4 px-2">
             We are a dedicated to organising events & parties , passionate about
             creating memorable experiences. With a focus on detail and customer
             satisfaction, we strive to make every event unique and
