@@ -28,7 +28,7 @@ export default function ServiceDropdown({ serviceName }) {
   }, [isOpen]);
 
   return (
-    <div className="relative flex justify-around w-full  mt-6 bg-[#ced3ff3d] py-4 ">
+    <div className="relative flex gap-1 justify-around w-full  mt-6 bg-[#ced3ff3d] py-4 ">
       {serviceTypes.map((service) => (
         <Link
           key={service.key}

@@ -1,5 +1,5 @@
 export const HomePageDummyData = [
-    {
+    { 
       id: 1,
       title: "Birthday Parties",
       image: require("../assets/birthday.jpg"),

@@ -4,13 +4,16 @@ import Service1 from "../Componentes/ServiceComponentes/Service1";
 // import bg10 from "../assets/bg-10.jpg";
 import bg10 from "../assets/bg-valvet.jpg";
 import corner from "../assets/corner-flower.png";
-import img1 from "../assets/customparty.webp";
+import bg1 from "../assets/flowerbg.png";
 
 import { Link } from "react-router-dom";
 
 export default function ServicePage() {
   return (
-    <div>
+    <div
+      className="scroll-smooth bg-fixed bg-cover bg-[#fff3f3]"
+      style={{ backgroundImage: `url(${bg1})` }}
+    >
       <Service1 />
       <div className="container m-auto w-[95vw] lg:w-[70vw]">
         <div

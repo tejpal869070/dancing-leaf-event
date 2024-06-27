@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import corner from "../assets/corner-flower.png";
 import bg10 from "../assets/bg-valvet.jpg";
+import bg1 from "../assets/flowerbg.png"
 
 const RentalItem = ({ item }) => {
   return (
@@ -32,7 +33,7 @@ const Rentals = () => {
   }, [inView]);
 
   return (
-    <div className="pt-40">
+    <div   className="pt-40 scroll-smooth bg-fixed bg-cover bg-[#fff3f3]"   style={{backgroundImage:`url(${bg1})`}}>
       <div className="container m-auto">
         <p className="text-black font-semibold text-center text-4xl md:text-4xl">
           Looking for items for your event ?

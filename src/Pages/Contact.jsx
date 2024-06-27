@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import gif1 from "../assets/gif4.gif";
-import bg2 from "../assets/bg-valvet.jpg";
+import React, { useState } from "react"; 
+import bg1 from "../assets/flowerbg.png"
 
 export default function Contact() {
 
@@ -25,10 +24,7 @@ export default function Contact() {
 
   return (
     <div
-      style={{
-        backgroundPosition: "center",
-        backgroundColor: "#e5e5e5",
-      }}
+    className="scroll-smooth bg-fixed bg-cover bg-[#fff3f3]"   style={{backgroundImage:`url(${bg1})`}}
     >
       <section className="relative z-10 overflow-hidden  py-20 lg:py-40 px-2 lg:px-40  ">
         <div className="container mx-auto">

@@ -26,7 +26,7 @@ export default function Service1() {
   }, [serviceName]);
 
   return (
-    <div className="container m-auto mt-40 px-4 overflow-hidden">
+    <div className="container m-auto mt-28 px-4 overflow-hidden">
       <div
         className="relative  flex justify-center align-center items-center h-[45vh] bg-cover"
         style={{
@@ -46,22 +46,22 @@ export default function Service1() {
       </div>
       <div className="container m-auto mt-10">
         <div class="bg-[#ced3ff3d]">
-          <div class="  flex flex-wrap  mx-auto px-4   pt-10 lg:pt-16 pb-16">
+          <div class="  flex flex-wrap  mx-auto     pt-10 lg:pt-16 pb-16">
             <div className="w-full items-center  px-4 lg:px-10 lg:w-[65%] flex flex-col">
-              <h1 class="font-semibold text-black text-4xl md:text-5xl">
+              <h1 class="font-semibold text-black text-2xl md:text-5xl">
                 {data.heading}
               </h1>
               <div class="max-w-4xl">
                 <p class="mt-5 text-black text-lg text-justify">{data.detail}</p>
               </div>
             </div>
-            <div  className="w-full lg:w-[35%]">
+            <div  className="w-full px-4 mt-2 lg:mt-0 lg:w-[35%]">
               <img alt="imag" src={data.mainimg}/>
             </div>
           </div>
         </div>
       </div>
-      <p className="rubik-font text-2xl mt-20">
+      <p className="rubik-font text-2xl mt-10 lg:mt-20">
         Explore Dancing Leaf Events Services: {data.name}
       </p>
       <div className=" mt-10   lg:gap-[5%] flex flex-wrap overflow-x-hidden">

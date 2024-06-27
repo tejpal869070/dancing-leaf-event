@@ -2,19 +2,14 @@ import React, { useState } from "react";
 import banner from "../assets/officialbanner.jpeg";
 import bg1 from "../assets/about-banner.jpg";
 import maampic from "../assets/maam3.webp";
-import banner4 from "../assets/banner4.jpg";
-import {
-  CorporateServices,
-  PrivateServices,
-  WeddingServices,
-} from "../Data/Services";
-// import Banner from '../Componentes/AboutComponentes/Banner'
-// import Hero2 from '../Componentes/AboutComponentes/Hero2'
-// import AboutHero1 from '../Componentes/AboutComponentes/AboutHero1'
+import bg2 from "../assets/flowerbg.png";
 
 export default function About() {
   return (
-    <div className="pt-40">
+    <div
+      className=" pt-40 scroll-smooth bg-fixed bg-cover bg-[#fff3f3]"
+      style={{ backgroundImage: `url(${bg2})` }}
+    >
       <div className="container m-auto">
         <div className="relative z-0">
           <img alt="banner" src={banner} />
@@ -36,10 +31,10 @@ export default function About() {
         className=" container m-auto flex flex-wrap mt-10 justify-between py-10 shadow-lg  bg-cover bg-no-repeat"
         style={{ backgroundImage: `url(${bg1})` }}
       >
-        <div className="w-full lg:w-[45%] flex flex-col justify-center     px-4 lg:px-10">
+        <div className="w-full lg:w-[45%] flex flex-col justify-center px-4 lg:px-10">
           <p className="text-3xl rubik-font">Saloni Mishra</p>
-          <p className="mt-2 mb-4">Entrepreneur</p>
-          <p className="text-lg text-justify ">
+          <p className="mt-2 mb-4">Event Planner</p>
+          <p className="text-lg text-justify">
             We are a dedicated to organising events & parties , passionate about
             creating memorable experiences. With a focus on detail and customer
             satisfaction, we strive to make every event unique and
@@ -225,14 +220,15 @@ export default function About() {
             <div class="max-w-5xl px-4 xl:px-0 mx-auto">
               <div class="mb-4">
                 <h2 class="text-neutral-400">
-                We excel in organizing a wide range of events and celebrations in our industry.
+                  We excel in organizing a wide range of events and celebrations
+                  in our industry.
                 </h2>
               </div>
 
               <div class="flex justify-between gap-6 text-white py-6 text-3xl courgette-regular">
-                <p >Private Parties</p>
-                <p >Corporate Events</p>
-                <p >Wedding Events</p>
+                <p>Private Parties</p>
+                <p>Corporate Events</p>
+                <p>Wedding Events</p>
               </div>
             </div>
           </div>

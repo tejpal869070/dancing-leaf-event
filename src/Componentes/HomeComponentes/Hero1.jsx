@@ -18,24 +18,55 @@ const images = [
 
 export default function Hero1() {
   return (
-    <div
-      className="relative w-[100vw] h-[85vh] overflow-hidden flex justify-end align-center items-center"
-      style={{
-        backgroundImage: `linear-gradient(to left, rgba(255,255,255,0.8) 30%, rgba(255,255,255,0) 100%), url(${banner2})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-      }}
-    >
-      <div className="w-full lg:w-[50%] px-10 ">
-        <p className="rubik-font  text-6xl">
-          Turn Your <span className="text-[#e4686f] font-semibold">Dream Event into</span> a Reality
-        </p>
-        <p className="rubik-font mt-4 text-xl">
-          Here unforgettable events come to life. With a passion for precision
-          and creativity, we specialize in crafting seamless experiences
-          tailored to your vision.
-        </p>
+    <div>
+      <div
+        className="  hidden lg:flex border-b-1 border-black relative w-[100vw] h-[75vh] lg:h-[85vh] overflow-hidden flex justify-end align-center items-center"
+        style={{
+          backgroundImage: `linear-gradient(to left, rgba(255,255,255,0.8) 30%, rgba(255,255,255,0) 100%), url(${banner2})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="w-full lg:w-[50%] px-6 lg:px-10 ">
+          <p className="rubik-font   text-5xl lg:text-6xl">
+            Turn Your{" "}
+            <span className="text-[#e4686f]  font-semibold">
+              Dream Event into{" "}
+            </span>
+            a Reality
+          </p>
+          <p className="rubik-font mt-4 text-xl  ">
+            Here unforgettable events come to life. With a passion for precision
+            and creativity, we specialize in crafting seamless experiences
+            tailored to your vision.
+          </p>
+        </div>
+      </div>
+
+      <div
+        className="block lg:hidden border-b-2 border-black relative w-[100vw] h-[75vh] lg:h-[85vh] overflow-hidden flex justify-end align-center items-center"
+        style={{
+          backgroundImage: `linear-gradient(to left, rgba(255,255,255,0.8) 100%, rgba(255,255,255,0) 100%), url(${banner2})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="w-full lg:w-[50%] px-6 lg:px-10 ">
+          <p className="rubik-font   text-5xl lg:text-6xl">
+            Turn Your{" "}
+            <span className="text-[#e4686f]  font-semibold">
+              Dream Event into{" "}
+            </span>
+            a Reality
+          </p>
+          <p className="rubik-font mt-4 text-xl  ">
+            Here unforgettable events come to life. With a passion for precision
+            and creativity, we specialize in crafting seamless experiences
+            tailored to your vision.
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import img1 from "../../assets/cakebg2.jpg";
 import img2 from "../../assets/categing.jpg";
 import img3 from "../../assets/rent13.jpg";
-import booth from "../../assets/photobooth.jpg";
+import booth from "../../assets/photobooth2.jpg";
 import { Link } from "react-router-dom";
 
 const images = [
@@ -14,13 +14,13 @@ const images = [
 
 export default function Cake() {
   return (
-    <div className="container border-lg m-auto mt-20">
-      <div>
+    <div className="container border-lg m-auto ">
+      <div className="px-4">
         <div className="flex flex-wrap mt-10 shadow-lg">
           {images.map((image, index) => (
             <div
               key={index}
-              className="w-full md:w-1/2 lg:w-1/3 relative cursor-pointer group overflow-hidden"
+              className="w-full mb-2 md:w-1/2 lg:w-1/3 relative cursor-pointer group overflow-hidden"
             >
               <img
                 alt="imgg"
@@ -72,8 +72,8 @@ export default function Cake() {
           ))}
         </div>
       </div>
-      <div className="container m-auto pt-20  px-4 lg:px-0">
-        <div className="flex  flex-wrap justify-between ">
+      <div className="container m-auto pt-20  px-4  ">
+        <div className="flex  flex-wrap-reverse justify-between ">
           <div className="w-full lg:w-[40%]">
             <img alt="slider" src={booth} />
           </div>
