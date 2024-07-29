@@ -59,7 +59,7 @@ function Gallery() {
     }
   }, [inView]);
   return (
-    <div className="py-16 lg:pt-12" ref={ref}>
+    <div className="py-16 lg:pt-12 px-2" ref={ref}>
       <p className="text-4xl font-bold text-[#9d1f60] text-center mb-1">
         Portfolio
       </p>
@@ -67,9 +67,17 @@ function Gallery() {
 
       <div className="columns-1 gap-5 container m-auto sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8">
         {GalleryData &&
-          GalleryData.map((item, index) => (
+          GalleryData.slice(0, 14).map((item, index) => (
             <img alt="img1" src={item.image} className="rounded-[30px]" />
           ))}
+      </div>
+      <div className="flex justify-center m-auto">
+        <Link
+          className=" mt-6 font-semibold inline-block bg-[#9dc6ea] rounded-[10px] text-[18px] min-w-[180px] px-[13px] py-[10px] text-center"
+          to={"/gallery"}
+        >
+          Show More.
+        </Link>
       </div>
 
       <div className="py-10 text-center">
@@ -79,7 +87,12 @@ function Gallery() {
         <p className="text-[18px] text-[#222222] font-[initial] text-center font-[500]">
           Contact us now and we will plan the event for you
         </p>
-        <Link className=" mt-6 inline-block bg-[#e59945] rounded-[10px] text-[18px] min-w-[180px] px-[13px] py-[10px] text-center" to={"/contact"}>Contact Now.</Link>
+        <Link
+          className=" mt-6 inline-block bg-[#e59945] rounded-[10px] text-[18px] min-w-[180px] px-[13px] py-[10px] text-center"
+          to={"/contact"}
+        >
+          Contact Now.
+        </Link>
       </div>
 
       <div className="container m-auto border-4 rounded-lg border-gray-500 mt-10 shadow-lg">

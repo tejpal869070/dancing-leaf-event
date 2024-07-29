@@ -20,17 +20,17 @@ export default function Cake() {
           {images.map((image, index) => (
             <div
               key={index}
-              className="w-full mb-2 md:w-1/2 lg:w-1/3 relative cursor-pointer group overflow-hidden"
+              className="w-full mb-2 md:w-1/2 lg:w-1/3 relative cursor-pointer overflow-hidden"
             >
               <img
                 alt="imgg"
                 src={image.src}
-                className="w-full transition-transform duration-300 transform group-hover:scale-105"
+                className="w-full"
               />
               <p className="absolute top-10  left-0 right-0 w-[50%] m-auto text-center text-3xl courgette-regular">
                 {image.text}
               </p>
-              <div className="absolute bottom-0 w-full transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div className="absolute bottom-0 w-full">
                 <div className="bg-white rounded-t-full h-20 flex justify-center items-center">
                   {index === 0 ? (
                     <p

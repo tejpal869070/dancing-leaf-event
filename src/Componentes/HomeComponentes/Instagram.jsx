@@ -4,7 +4,7 @@ import bg1 from "../../assets/colorwave.png";
 
 export default function Instagram() {
   return (
-    <div className="" style={{ backgroundImage: `url(${bg1})` }}>
+    <div className="px-2" style={{ backgroundImage: `url(${bg1})` }}>
       <a href="https://www.instagram.com/dancingleafevents2023/?igsh=YXNoNGw5OGlldTVp" alt="insta" target="_blank" rel="noreferrer">
         <div className="pt-28 font-sans  w-full flex flex-row justify-center items-center">
           <div className="card w-96 mx-auto bg-white  shadow-4xl hover:shadow">

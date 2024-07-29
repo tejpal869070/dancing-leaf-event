@@ -1,13 +1,15 @@
-import React, { useState } from "react"; 
-import bg1 from "../assets/flowerbg.png"
+import React, { useState } from "react";
+import bg1 from "../assets/flowerbg.png";
+import axios from "axios";
+import { ContactUs } from "../Controller/api";
 
 export default function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [phone, setPhone] = useState("");
 
-  const[name,setName] = useState('')
-  const[email,setEmail] = useState('')
-  const[message,setMessage] = useState('')
-  const[phone,setPhone] = useState('')
-
+  const [loading, setLoading] = useState(false);
 
   const formData = {
     name,
@@ -16,15 +18,32 @@ export default function Contact() {
     phone,
   };
 
-  const handlesubmit=(e)=>{
-    e.preventDefault()
-    console.log(formData)
-  }
- 
+  const handlesubmit = async (e) => {
+    setLoading(true);
+    e.preventDefault();
+    try {
+      const response = await ContactUs(formData);
+      if (response.status) {
+        alert("Thanks For Connecting With Us. We will get back to you soon.");
+        setLoading(false);
+        setName("");
+        setEmail("");
+        setMessage("");
+        setPhone("");
+      } else {
+        alert("Something went wrong");
+        setLoading(false);
+      }
+    } catch (error) {
+      alert("Something went wrong");
+      setLoading(false);
+    }
+  };
 
   return (
     <div
-    className="scroll-smooth bg-fixed bg-cover bg-[#fff3f3]"   style={{backgroundImage:`url(${bg1})`}}
+      className="scroll-smooth bg-fixed bg-cover bg-[#fff3f3]"
+      style={{ backgroundImage: `url(${bg1})` }}
     >
       <section className="relative z-10 overflow-hidden  py-20 lg:py-40 px-2 lg:px-40  ">
         <div className="container mx-auto">
@@ -135,13 +154,13 @@ export default function Contact() {
             </div>
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
               <div className="relative p-8 bg-cover bg-no-repeat rounded-lg shadow-lg dark:bg-dark-2 sm:p-12 bg-white">
-                <form onSubmit={(e)=>handlesubmit(e)}>
+                <form onSubmit={(e) => handlesubmit(e)}>
                   <div className="mb-6">
                     <input
                       type="text"
                       placeholder="Your Name"
                       value={name}
-                      onChange={(e)=>setName(e.target.value)}
+                      onChange={(e) => setName(e.target.value)}
                       required
                       className="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full rounded-full border py-3 px-[14px] text-base outline-none"
                     />
@@ -150,7 +169,7 @@ export default function Contact() {
                     <input
                       type="email"
                       value={email}
-                      onChange={(e)=>setEmail(e.target.value)}
+                      onChange={(e) => setEmail(e.target.value)}
                       required
                       placeholder="Your Email"
                       className="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full rounded-full border py-3 px-[14px] text-base outline-none"
@@ -162,7 +181,7 @@ export default function Contact() {
                       required
                       placeholder="Your Phone"
                       value={phone}
-                      onChange={(e)=>setPhone(e.target.value)}
+                      onChange={(e) => setPhone(e.target.value)}
                       className="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full rounded-full border py-3 px-[14px] text-base outline-none"
                     />
                   </div>
@@ -172,7 +191,7 @@ export default function Contact() {
                       required
                       placeholder="Your Message"
                       value={message}
-                      onChange={(e)=>setMessage(e.target.value)}
+                      onChange={(e) => setMessage(e.target.value)}
                       className="border-stroke dark:border-dark-3 dark:text-dark-6 dark:bg-dark text-body-color focus:border-primary w-full resize-none rounded-lg border py-3 px-[14px] text-base outline-none"
                     ></textarea>
                   </div>
@@ -181,7 +200,7 @@ export default function Contact() {
                       type="submit"
                       className="w-full p-3 text-white transition border rounded-full border-primary bg-[blue] hover:bg-opacity-90"
                     >
-                      Send Message
+                      {loading ? "Sending Request..." : "Send Message"}
                     </button>
                   </div>
                 </form>

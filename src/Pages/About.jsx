@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import banner from "../assets/officialbanner.jpeg";
 import bg1 from "../assets/about-banner.jpg";
-import maampic from "../assets/maam3.webp";
+import maampic from "../assets/photos/maam.png";
 import bg2 from "../assets/flowerbg.png";
 
 export default function About() {
@@ -102,7 +102,7 @@ export default function About() {
           </div>
         </div>
         <div className="w-full lg:w-[45%]">
-          <img alt="maam" src={maampic} className="w-[70%] m-auto" />
+          <img alt="maam" src={maampic} className="w-[80%] m-auto" />
         </div>
       </div>
 
@@ -225,7 +225,7 @@ export default function About() {
                 </h2>
               </div>
 
-              <div class="flex justify-between gap-6 text-white py-6 text-3xl courgette-regular">
+              <div class="flex flex-wrap justify-between gap-4 text-white py-6 text-3xl courgette-regular">
                 <p>Private Parties</p>
                 <p>Corporate Events</p>
                 <p>Wedding Events</p>

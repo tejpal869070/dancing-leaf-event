@@ -7,7 +7,7 @@ export default function Services( ) {
   return (
     <div className="py-6 container m-auto">
       <h1 className="text-center text-4xl rubik-font  ">Our Services</h1>
-      <div className="flex flex-wrap justify-between justify-center mb-4 mt-6 w-full">
+      <div className="flex flex-wrap justify-between justify-center mb-4 mt-6 w-full px-2">
         {HomePageDummyData &&
           HomePageDummyData.map((item, index) => (
             <div key={index} className="w-full md:w-[48%] lg:w-[31%] mb-10">

@@ -1,13 +1,8 @@
-import React, { useState } from "react";
-import aboutimg from "../../assets/design.png";
+import React from "react";
+import aboutimg from "../../assets/home_11zon.png";
 import bannerimg1 from "../../assets/photos/img2.jpg";
 
 export default function AboutUsHome() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const handleChange = (visible) => {
-    setIsVisible(visible);
-  };
   return (
     <div className="container m-auto  md:pt-12 lg:pt-20  px-4 lg:px-0">
       <div className="flex flex-wrap justify-between ">
@@ -34,8 +29,8 @@ export default function AboutUsHome() {
             Experience excellence in every detail with Dancing Leaf Events.
           </p>
         </div>
-        <div className="w-full lg:w-[40%]">
-          <img alt="slider" src={aboutimg} />
+        <div className="w-full flex m-auto lg:w-[40%] ">
+          <img alt="slider" src={aboutimg} className="m-auto" />
         </div>
       </div>
 
