@@ -22,6 +22,22 @@ export const GalleryData = [
   },
   {
     id: 1,
+    image: require("../assets/photos/img21.jpeg"),
+  },
+  {
+    id: 1,
+    image: require("../assets/photos/img22.jpeg"),
+  },
+  {
+    id: 1,
+    image: require("../assets/photos/img23.jpeg"),
+  },
+  {
+    id: 1,
+    image: require("../assets/photos/img24.jpeg"),
+  },
+  {
+    id: 1,
     image: require("../assets/photos/img6.jpg"),
   },
   {

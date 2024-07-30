@@ -65,7 +65,7 @@ function Gallery() {
       </p>
       <div className="h-[4px] rounded-full w-[60px] m-auto bg-black mb-6"></div>
 
-      <div className="columns-1 gap-5 container m-auto sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8">
+      <div className="columns-2 gap-5 container m-auto sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8">
         {GalleryData &&
           GalleryData.slice(0, 14).map((item, index) => (
             <img alt="img1" src={item.image} className="rounded-[30px]" />
