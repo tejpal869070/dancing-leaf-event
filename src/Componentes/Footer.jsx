@@ -27,7 +27,7 @@ export default function Footer() {
             &copy; 2024 Your Website. All rights reserved.
           </p>
           <p>
-            Designed & Developed by
+            
             <a
               target="_blank"
               rel="noreferrer"
